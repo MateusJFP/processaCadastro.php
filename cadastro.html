@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Colaboradores - Lojas Brincos e Companhia</title>
+    <!-- Utilizando W3.CSS apenas para estilização, via CDN -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+    <div class="w3-container w3-teal w3-padding-32">
+        <h2>Lojas Brincos e Companhia</h2>
+        <h4>Cadastro de Novos Colaboradores</h4>
+    </div>
+
+    <div class="w3-container w3-padding-32">
+        <div class="w3-card-4 w3-white w3-container w3-padding-16" style="max-width:600px; margin:auto;">
+
+            <!--
+                O formulário envia os dados via método POST para o processaCadastro.php
+                Os campos "name" foram numerados conforme solicitado na atividade:
+                nome1, idade2, profissao3, salario4, experiencia5
+            -->
+            <form action="processaCadastro.php" method="POST">
+
+                <label class="w3-text-teal"><b>Nome Completo</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text"
+                       name="nome1" placeholder="Digite seu nome completo" required>
+
+                <label class="w3-text-teal"><b>Idade</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="number"
+                       name="idade2" placeholder="Digite sua idade" min="14" max="100" required>
+
+                <label class="w3-text-teal"><b>Profissão</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text"
+                       name="profissao3" placeholder="Digite sua profissão" required>
+
+                <label class="w3-text-teal"><b>Salário Pretendido (R$)</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="number"
+                       name="salario4" step="0.01" placeholder="Ex: 2500.00" required>
+
+                <label class="w3-text-teal"><b>Experiência Anterior</b></label>
+                <textarea class="w3-input w3-border w3-margin-bottom" name="experiencia5"
+                          rows="5" placeholder="Descreva brevemente sua experiência profissional anterior" required></textarea>
+
+                <button type="submit" class="w3-btn w3-teal w3-round w3-margin-top">
+                    Enviar Cadastro
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
